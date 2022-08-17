@@ -3,7 +3,7 @@
   hosts: "{{ HOSTS | default('web') }}"
   tasks:
     - include_role:
-        name: insights-client
+        name: redhatinsights.insights
       vars:
         redhat_portal_username: "{{ insights_user }}"
         redhat_portal_password: "{{ insights_password }}"
