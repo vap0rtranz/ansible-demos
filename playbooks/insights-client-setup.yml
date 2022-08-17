@@ -1,8 +1,7 @@
 ---
 - name: install and configure insights agent on all specified nodes
   hosts: "{{ HOSTS | default('web') }}"
-  collections:
-    - redhatinsights.insights
+
   vars:
         redhat_portal_username: "{{ insights_user }}"
         redhat_portal_password: "{{ insights_password }}"
@@ -10,7 +9,7 @@
         
   tasks:
     - include_role:
-        name: insights_client
+        name: redhatinsights.insights.insights_client
       when: ansible_os_family == 'RedHat'
 
     - name: print info to terminal window
