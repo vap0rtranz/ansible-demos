@@ -9,7 +9,7 @@
         
   tasks:
     - include_role:
-        name: redhat.insights
+        name: redhat.insights.insights_client
       when: ansible_os_family == 'RedHat'
 
     - name: print info to terminal window
