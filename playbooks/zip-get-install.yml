@@ -14,7 +14,4 @@
   - name: install 7 zip
     win_package:
       path: 'C:\ansible\wzipse40.msi'
-      arguments: 
-        - '/i'
-        - '/qn'
       state: present
