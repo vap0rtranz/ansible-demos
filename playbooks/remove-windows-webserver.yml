@@ -1,0 +1,13 @@
+---
+- name: remove the Windows web service
+  hosts: all
+
+  tasks:
+    - name: stop IIS service
+      win_service:
+        name: W3Svc
+        state: stopped
+    - name: remove Web Service
+      win_feature:
+        name: Web-Server
+        state: abscent
