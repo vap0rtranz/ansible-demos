@@ -15,12 +15,10 @@
     win_package:
       path: 'C:\ansible\wzipse40.msi'
       state: present
-    when: not sevenzip_uninstall
   - name: uninstall 7 zip
     win_package:
       path: 'C:\ansible\wzipse40.msi'
       state: absent
-    when: sevenzip_uninstall
   - name: remove 7zip install folder
     win_file:
       path: C:\ansible
