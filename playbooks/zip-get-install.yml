@@ -7,11 +7,11 @@
     win_file:
       path: C:\ansible
       state: directory
-  - name: download 7zip from URL
+  - name: download Winzip from URL
     win_get_url:
       url: https://download.winzip.com/wzipse40.msi
       dest: C:\ansible
-  - name: install 7 zip
+  - name: install Winzip
     win_package:
       path: 'C:\ansible\wzipse40.msi'
       state: present
