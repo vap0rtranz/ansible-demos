@@ -10,4 +10,4 @@
     - name: remove Web Service
       win_feature:
         name: Web-Server
-        state: abscent
+        state: absent
