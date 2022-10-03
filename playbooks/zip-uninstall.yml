@@ -3,7 +3,7 @@
   hosts: all
 
   tasks:
-  - name: uninstall 7 zip
+  - name: uninstall winzip
     win_package:
       path: 'C:\ansible\wzipse40.msi'
       state: absent
